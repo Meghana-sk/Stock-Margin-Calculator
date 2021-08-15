@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Stocks Margin Calculator</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="main">
+      <h2>Stocks Margin calculator</h2>
+      <label for="stock-price">Stock price bought</label>
+      <input
+        type="number"
+        id="stock-price"
+        placeholder="enter bought price"
+        min="1"
+      />
+      <br />
+      <label for="stocks-quantity">quantity of stocks</label>
+      <input
+        type="number"
+        id="stocks-quantity"
+        placeholder="enter quantity"
+        min="0"
+      />
+      <br />
+      <label for="current-price">current stock price</label>
+      <input
+        type="number"
+        id="current-price"
+        placeholder="enter current price"
+        min="1"
+      />
+      <br />
+      <button id="check-btn">Check P/L</button>
+      <p id="display-result"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
