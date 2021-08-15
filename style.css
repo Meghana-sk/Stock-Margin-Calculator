@@ -54,6 +54,7 @@ button {
   background-size: contain;
   background-repeat: no-repeat;
   margin: auto;
+  display: none;
 }
 
 #display-result {
@@ -62,5 +63,5 @@ button {
   font-weight: bolder;
   background-color: blueviolet;
   padding: 0.5rem;
-  display: inline-block;
+  display: none;
 }

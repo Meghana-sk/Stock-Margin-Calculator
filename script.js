@@ -19,7 +19,8 @@ function clickHandler() {
   let margin = ((currentPriceTotalValue - boughtPriceTotalValue) / boughtPriceTotalValue) * 100;
   if (margin <= -50) {
     console.log("***", margin)
-    displayResult.innerText = `Ohooo 😞 P/L${margin}%🔻`
+    displayResult.style.display = "inline-block";
+    displayResult.innerText = `Ohooo 😞 P/L 🔻${margin}%`
     // document.body.style.backgroundImage = "url('sad.jpg')";
     // document.body.style.backgroundPosition = "right";
    
@@ -30,12 +31,19 @@ function clickHandler() {
   } else if (margin === 0) {
     console.log("*****", margin)
     // document.body.style.backgroundImage = "url()"
+    displayResult.style.display = "inline-block";
     displayResult.innerText = `😐 P/L ${margin}%`
     lossImage.style.display = "none";
   } else if (margin > 0) {
     console.log("*******", margin)
-    document.body.style.backgroundImage = "url()"
-    displayResult.innerText = `Hurray.   P/L ${margin}%🔼`
+    document.body.style.backgroundImage = "url()";
+    displayResult.style.display = "inline-block";
+    displayResult.innerText = `Hurray. P/L 🔼${margin}%`;
+    lossImage.style.display = "none";
+  } else {
+    document.body.style.backgroundImage = "url()";
+    displayResult.style.display = "inline-block";
+    displayResult.innerText = `Loss. P/L 🔻${margin}% `;
     lossImage.style.display = "none";
   }
 }
