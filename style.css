@@ -3,8 +3,6 @@
 body {
   font-family: "Raleway", sans-serif;
   background-color: white;
-  /* background-image: url("sad.jpg"); */
-  /* background-position: ; */
 }
 
 h2 {
@@ -14,32 +12,28 @@ h2 {
 }
 
 .main {
-  width: 50vw;
+  width: 30%;
   margin: auto;
   background-color: tomato;
   padding: 2rem;
+  display: list-item;
 }
 
 input {
-  text-align: center;
   padding: 0.2rem;
-  margin-top: 1rem;
+  margin-top: 0.3rem;
   color: black;
-  display: inline-block;
 }
 
 label {
-  text-align: center;
   padding: 0.2rem;
-  margin-left: 10rem;
   color: whitesmoke;
-  display: inline-block;
   font-weight: bolder;
+  margin-top: 1rem;
 }
 
 button {
-  margin-left: 15rem;
-  margin-top: 1rem;
+  margin: 1rem auto;
   background-color: blue;
   color: azure;
   font-weight: bolder;
@@ -64,4 +58,8 @@ button {
   background-color: blueviolet;
   padding: 0.5rem;
   display: none;
+}
+
+div {
+  margin: auto;
 }

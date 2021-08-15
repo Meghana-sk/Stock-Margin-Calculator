@@ -13,6 +13,7 @@ function clickHandler() {
   let quantityStocks = Number(quantityBought.value);
   let currentPrice = Number(currentStockPrice.value);
 
+  if (boughtPrice && quantityStocks && currentPrice) {
   let boughtPriceTotalValue = boughtPrice * quantityStocks;
   let currentPriceTotalValue = currentPrice * quantityStocks;
   console.log("//", boughtPriceTotalValue, currentPriceTotalValue)
@@ -46,6 +47,11 @@ function clickHandler() {
     displayResult.innerText = `Loss. P/L 🔻${margin}% `;
     lossImage.style.display = "none";
   }
+}
+else {
+  displayResult.style.display = "inline-block";
+    displayResult.innerText = "Tell what you have invested 🙃"
+}
 }
 
 checkBtn.addEventListener("click", clickHandler)
