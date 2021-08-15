@@ -38,7 +38,7 @@ function clickHandler() {
     console.log("*******", margin)
     document.body.style.backgroundImage = "url()";
     displayResult.style.display = "inline-block";
-    displayResult.innerText = `Hurray. P/L 🔼${margin}%`;
+    displayResult.innerText = `🥳 Hurray.P/L 🔼${margin}%`;
     lossImage.style.display = "none";
   } else {
     document.body.style.backgroundImage = "url()";
