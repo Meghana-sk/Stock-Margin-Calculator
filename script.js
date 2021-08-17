@@ -14,37 +14,28 @@ function clickHandler() {
   let currentPrice = Number(currentStockPrice.value);
 
   if (boughtPrice && quantityStocks && currentPrice) {
+
   let boughtPriceTotalValue = boughtPrice * quantityStocks;
   let currentPriceTotalValue = currentPrice * quantityStocks;
-  console.log("//", boughtPriceTotalValue, currentPriceTotalValue)
   let margin = ((currentPriceTotalValue - boughtPriceTotalValue) / boughtPriceTotalValue) * 100;
+  
   if (margin <= -50) {
-    console.log("***", margin)
     displayResult.style.display = "inline-block";
-    displayResult.innerText = `Ohooo 😞 P/L 🔻${margin}%`
-    // document.body.style.backgroundImage = "url('sad.jpg')";
-    // document.body.style.backgroundPosition = "right";
-   
-    //  document.body.style.backgroundSize = "300px 300px";
-    // document.body.style.backgroundRepeat = "no-repeat";
-    // lossImage.style.backgroundImage = "url('sad.jpg')"
+    displayResult.innerText = `Ohooo 😞 P/L 🔻${margin}% You gained Rs.${(currentPriceTotalValue - boughtPriceTotalValue)}`
     lossImage.style.display = "block";
   } else if (margin === 0) {
-    console.log("*****", margin)
-    // document.body.style.backgroundImage = "url()"
     displayResult.style.display = "inline-block";
-    displayResult.innerText = `😐 P/L ${margin}%`
+    displayResult.innerText = `😐 P/L ${margin}% You gained Rs.${(currentPriceTotalValue - boughtPriceTotalValue)}`;
     lossImage.style.display = "none";
   } else if (margin > 0) {
-    console.log("*******", margin)
     document.body.style.backgroundImage = "url()";
     displayResult.style.display = "inline-block";
-    displayResult.innerText = `🥳 Hurray.P/L 🔼${margin}%`;
+    displayResult.innerText = `🥳 Hurray.P/L 🔼${margin}%. You gained Rs.${(currentPriceTotalValue - boughtPriceTotalValue)}`;
     lossImage.style.display = "none";
   } else {
     document.body.style.backgroundImage = "url()";
     displayResult.style.display = "inline-block";
-    displayResult.innerText = `Loss. P/L 🔻${margin}% `;
+    displayResult.innerText = `Loss. P/L 🔻${margin}% You lost Rs.${(currentPriceTotalValue - boughtPriceTotalValue)}`;
     lossImage.style.display = "none";
   }
 }
@@ -55,6 +46,4 @@ else {
 }
 
 checkBtn.addEventListener("click", clickHandler)
-
-
 
