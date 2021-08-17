@@ -21,7 +21,7 @@ function clickHandler() {
   
   if (margin <= -50) {
     displayResult.style.display = "inline-block";
-    displayResult.innerText = `Ohooo 😞 P/L 🔻${margin}% You lost Rs.${(currentPriceTotalValue - boughtPriceTotalValue)}`
+    displayResult.innerText = `Ohooo 😞 P/L 🔻${margin}% You lost Rs.${-(currentPriceTotalValue - boughtPriceTotalValue)}`
     lossImage.style.display = "block";
   } else if (margin === 0) {
     displayResult.style.display = "inline-block";
@@ -35,7 +35,7 @@ function clickHandler() {
   } else {
     document.body.style.backgroundImage = "url()";
     displayResult.style.display = "inline-block";
-    displayResult.innerText = `Loss. P/L 🔻${margin}% You lost Rs.${(currentPriceTotalValue - boughtPriceTotalValue)}`;
+    displayResult.innerText = `Loss. P/L 🔻${margin}% You lost Rs.${-(currentPriceTotalValue - boughtPriceTotalValue)}`;
     lossImage.style.display = "none";
   }
 }
