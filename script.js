@@ -17,7 +17,7 @@ function clickHandler() {
 
   let boughtPriceTotalValue = boughtPrice * quantityStocks;
   let currentPriceTotalValue = currentPrice * quantityStocks;
-  let margin = ((currentPriceTotalValue - boughtPriceTotalValue) / boughtPriceTotalValue) * 100;
+  let margin = (((currentPriceTotalValue - boughtPriceTotalValue) / boughtPriceTotalValue) * 100).toFixed(2);
   
   if (margin <= -50) {
     displayResult.style.display = "inline-block";
