@@ -13,7 +13,7 @@ function clickHandler() {
   let quantityStocks = Number(quantityBought.value);
   let currentPrice = Number(currentStockPrice.value);
 
-  if (boughtPrice && quantityStocks && currentPrice) {
+  if (boughtPrice > 0 && quantityStocks > 0 && currentPrice > 0) {
 
   let boughtPriceTotalValue = boughtPrice * quantityStocks;
   let currentPriceTotalValue = currentPrice * quantityStocks;
@@ -21,7 +21,7 @@ function clickHandler() {
   
   if (margin <= -50) {
     displayResult.style.display = "inline-block";
-    displayResult.innerText = `Ohooo 😞 P/L 🔻${margin}% You lost Rs.${-(currentPriceTotalValue - boughtPriceTotalValue)}`
+    displayResult.innerText = `Ohooo 😞 P/L 🔻${margin}% You lost Rs.${-(currentPriceTotalValue - boughtPriceTotalValue)}`;
     lossImage.style.display = "block";
   } else if (margin === 0) {
     displayResult.style.display = "inline-block";
@@ -41,7 +41,7 @@ function clickHandler() {
 }
 else {
   displayResult.style.display = "inline-block";
-    displayResult.innerText = "Tell what you have invested 🙃"
+    displayResult.innerText = "Given data is invalid 🙃"
 }
 }
 
