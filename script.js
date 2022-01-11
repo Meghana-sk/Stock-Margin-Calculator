@@ -5,7 +5,7 @@ const checkBtn = document.querySelector("#check-btn");
 const displayResult = document.querySelector("#display-result");
 const lossImage = document.querySelector("#image-loss");
 
-function clickHandler() {
+const clickHandler = () => {
   let boughtPrice = Number(boughtStockPrice.value);
   let quantityStocks = Number(quantityBought.value);
   let currentPrice = Number(currentStockPrice.value);
@@ -48,6 +48,6 @@ function clickHandler() {
     displayResult.style.display = "inline-block";
     displayResult.innerText = "Given data is invalid 🙃";
   }
-}
+};
 
 checkBtn.addEventListener("click", clickHandler);
